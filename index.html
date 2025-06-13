@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN för ikoner (valfritt) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Erik Nilsson</h1>
+            <p>Nyexamineerad webbredaktör som vill göra ert arbete lite enklare!</p>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about">Om mig</a></li>
+                <li><a href="#projects">Projekt</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+                 <section id="about">
+            <div class="container">
+                <h2 class="about-title">Om mig</h2>
+                <div class="about-flex">
+                    <img src="erik.jpg" alt="Erik Nilsson" class="profilbild">
+                                        <div class="about-text">
+                        <p>Hallå där!<br>
+                        Jag heter Erik och är nyexaminerad webbredaktör efter tre lärorika år som student. Nu söker jag en tjänst där jag får använda mina kunskaper inom webb, UX och textproduktion.</p>
+                        <p>Som person är jag social, driven, lösningsorienterad och någon som alltid vill utvecklas.</p>
+                        <p>Hoppas att min profil matchar det ni söker och hör gärna av er om ni vill veta mer! :)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+       <section id="projects">
+        <div class="container">
+            <h2>Projekt</h2>
+            <div class="projects-grid">
+                <a href="bkhufvudstad.html" class="project" id="project1">
+                    <h3>BK Hufvudstad</h3>
+                    <p>Digital design anpassad för idrottsföreningen BK Hufvudstad.</p>
+                </a>
+                <a href="design.html" class="project" id="project2">
+                    <h3>Grafisk design</h3>
+                    <p>Exempel på logotyper, affischer och grafiska profiler skapade i olika projekt.</p>
+                </a>
+                <a href="text.html" class="project" id="project3">
+                    <h3>Textproduktioner</h3>
+                    <p>Olika texter och artiklar skrivna anpassade webb och tryck.</p>
+                </a>
+                <a href="webbprototyper.html" class="project" id="project4">
+                    <h3>Webbprototyper</h3>
+                    <p>Interaktiva prototyper och wireframes för webbsidor och appar.</p>
+                </a>
+                <a href="ErikNilsson.pdf" class="project project-cv" id="project5" target="_blank">
+                    <h3>Curriculum Vitae</h3>
+                    <p>Se mitt CV där tidigare erfarenheter, studier och egenskaper presenteras.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+       <section id="contact">
+        <div class="container">
+            <h2 class="contact-main-title">Kontakt</h2>
+            <div class="contact-flex">
+                <div class="contact-form-wrapper">
+                    <h3 class="contact-subtitle">Kontakta mig</h3>
+                    <form action="mailto:erik98.nilsson@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                        <label for="name">Namn:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">E-post:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Meddelande:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <button type="submit">Skicka</button>
+                    </form>
+                </div>
+                                <div class="contact-info-wrapper">
+                    <h3 class="contact-subtitle">Kontaktinfo</h3>
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <a href="mailto:erik98.nilsson@gmail.com">
+                                <i class="fas fa-envelope"></i> Erik98.nilsson@gmail.com
+                            </a>
+                        </div>
+                        <div class="contact-info-item">
+                            <a href="https://www.linkedin.com/in/erik98nilsson" target="_blank">
+                                <img src="linkedin.png" alt="LinkedIn logga" style="width:24px; height:24px; vertical-align:middle; margin-right:6px;">LinkedIn
+                            </a>
+                        </div>
+                        <div class="contact-info-item">
+                            <a href="tel:+46739309002">
+                                <i class="fas fa-phone"></i> +46 73 930 90 02
+                            </a>
+                        </div>
+                        <div class="contact-info-item">
+                            <a href="https://github.com/Erikn98" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Erik N.</p>
+        </div>
+    </footer>
+</body>
+</html>
