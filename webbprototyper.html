@@ -3,54 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <title>Webbprototyper – Erik Nilsson Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome för pilen -->
+    <!-- Font Awesome för pilen och hamburgarikonen -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      .hamburger {
+        display: none;
+        font-size: 2em;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        margin: 0 12px 0 0;
+        z-index: 1001;
+      }
+      .main-nav .back-menu-link {
+        display: none;
+      }
+      .back-btn-desktop {
+        display: inline-block;
+      }
+      @media (max-width: 700px) {
+        .main-nav ul {
+          display: none;
+          flex-direction: column;
+          gap: 18px;
+          background: #184D47;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100vw;
+          padding: 24px 0 16px 0;
+          margin: 0;
+          box-shadow: 0 8px 24px rgba(24,77,71,0.13);
+          z-index: 1000;
+        }
+        .main-nav ul.open {
+          display: flex;
+        }
+        .hamburger {
+          display: block;
+          position: absolute;
+          right: 18px;
+          top: 18px;
+        }
+        .main-nav li {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+        .main-nav a {
+          width: 90vw;
+          max-width: 340px;
+          text-align: center;
+          padding: 14px 0;
+          font-size: 1.1em;
+          margin: 0 auto;
+          border-radius: 10px;
+          background: rgba(24,77,71, 0.85);
+          border: 2px solid #28A745;
+          color: #fff;
+        }
+        .main-nav .back-menu-link {
+          display: flex;
+        }
+        .back-btn-desktop {
+          display: none;
+        }
+      }
+    </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Tillbaka till startsidan</a>
+        <a href="index.html" class="back-btn back-btn-desktop"><i class="fas fa-arrow-left"></i> Tillbaka till startsidan</a>
         <h1>Webbprototyper</h1>
         <nav class="main-nav">
-    <ul>
-        <li><a href="bkhufvudstad.html">BK Hufvudstad</a></li>
-        <li><a href="design.html">Grafisk design</a></li>
-        <li><a href="text.html">Textproduktioner</a></li>
-        <li><a href="webbprototyper.html">Webbprototyper</a></li>
-    </ul>
-</nav>
+            <button class="hamburger" aria-label="Öppna meny"><i class="fas fa-bars"></i></button>
+            <ul>
+                <li class="back-menu-link"><a href="index.html"><i class="fas fa-arrow-left"></i> Tillbaka till startsidan</a></li>
+                <li><a href="bkhufvudstad.html">BK Hufvudstad</a></li>
+                <li><a href="design.html">Grafisk design</a></li>
+                <li><a href="text.html">Textproduktioner</a></li>
+                <li><a href="webbprototyper.html">Webbprototyper</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section>
             <h2>Olika webbprojekt</h2>
-                                               <div class="bkh-grid">
-                            <div class="bkh-card">
-                                <a href="https://www.figma.com/proto/Uv94S9jatNSTQD6QnqdT3i/Klimatv%C3%A4nner_Prototyp?node-id=0-1&t=8s7SMfj8vxd9umDa-1" target="_blank">
-                                    <img src="klimat.png" alt="Skärmdump på klimatvänner webbplats" class="bkh-thumb">
-                                </a>
-                                <h3>Klimatvänner</h3>
-                                <p>Prototyp framtagen för en fiktiv förening som jobbar med miljöfrågor, riktad till mellanstadieelever.</p>
-                            </div>
-                            <div class="bkh-card">
-                                <a href="https://www.figma.com/design/P27ujlxmkSATGJakl7djOE/WanderWorld_Prototyp_App?node-id=0-1&t=0svZHPwBp1LwyCbq-1" target="_blank">
-                                    <img src="wanderworld.png" alt="Skärmdump på WanderWorlds mobila app" class="bkh-thumb">
-                                </a>
-                                <h3>WanderWorld</h3>
-                                <p>Mobilapplikationsprototyp riktad till backpackers som vill upptäcka platser och träffa människor.</p>
-                            </div>
-                            <div class="bkh-card">
-                                
-                                    <img src="Coming_soon.png" alt="Uppkommande projekt." class="bkh-thumb">
-                                </a>
-                                <h3>Uppkommande projekt</h3>
-                            </div>
-                            <div class="bkh-card">
-                                
-                                    <img src="Coming_soon.png" alt="Uppkommande projekt." class="bkh-thumb">
-                                </a>
-                                <h3>Uppkommande projekt</h3>
-                            </div>
-                        </div>
+            <div class="bkh-grid">
+                <div class="bkh-card">
+                    <a href="https://www.figma.com/proto/Uv94S9jatNSTQD6QnqdT3i/Klimatv%C3%A4nner_Prototyp?node-id=0-1&t=8s7SMfj8vxd9umDa-1" target="_blank">
+                        <img src="klimat.png" alt="Skärmdump på klimatvänner webbplats" class="bkh-thumb">
+                    </a>
+                    <h3>Klimatvänner</h3>
+                    <p>Prototyp framtagen för en fiktiv förening som jobbar med miljöfrågor, riktad till mellanstadieelever.</p>
+                </div>
+                <div class="bkh-card">
+                    <a href="https://www.figma.com/design/P27ujlxmkSATGJakl7djOE/WanderWorld_Prototyp_App?node-id=0-1&t=0svZHPwBp1LwyCbq-1" target="_blank">
+                        <img src="wanderworld.png" alt="Skärmdump på WanderWorlds mobila app" class="bkh-thumb">
+                    </a>
+                    <h3>WanderWorld</h3>
+                    <p>Mobilapplikationsprototyp riktad till backpackers som vill upptäcka platser och träffa människor.</p>
+                </div>
+                <div class="bkh-card">
+                    <img src="Coming_soon.png" alt="Uppkommande projekt." class="bkh-thumb">
+                    <h3>Uppkommande projekt</h3>
+                </div>
+                <div class="bkh-card">
+                    <img src="Coming_soon.png" alt="Uppkommande projekt." class="bkh-thumb">
+                    <h3>Uppkommande projekt</h3>
+                </div>
+            </div>
         </section>
         <section class="center-section">
             <h2>Om prototyperna</h2>
@@ -62,4 +127,16 @@
             </p>
         </section>
     </main>
+    <script>
+      // Hamburger-meny funktion
+      document.querySelector('.hamburger').addEventListener('click', function() {
+        document.querySelector('.main-nav ul').classList.toggle('open');
+      });
+      // Stäng meny när man klickar på en länk (mobil)
+      document.querySelectorAll('.main-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.querySelector('.main-nav ul').classList.remove('open');
+        });
+      });
+    </script>
 </body>

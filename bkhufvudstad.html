@@ -3,58 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <title>BK Hufvudstad – Erik Nilsson Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome för pilen -->
+    <!-- Font Awesome för pilen och hamburgarikonen -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      .hamburger {
+        display: none;
+        font-size: 2em;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        margin: 0 12px 0 0;
+        z-index: 1001;
+      }
+      .main-nav .back-menu-link {
+        display: none;
+      }
+      .back-btn-desktop {
+        display: inline-block;
+      }
+      @media (max-width: 700px) {
+        .main-nav ul {
+          display: none;
+          flex-direction: column;
+          gap: 18px;
+          background: #184D47;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          width: 100vw;
+          padding: 24px 0 16px 0;
+          margin: 0;
+          box-shadow: 0 8px 24px rgba(24,77,71,0.13);
+          z-index: 1000;
+        }
+        .main-nav ul.open {
+          display: flex;
+        }
+        .hamburger {
+          display: block;
+          position: absolute;
+          right: 18px;
+          top: 18px;
+        }
+        .main-nav li {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+        .main-nav a {
+          width: 90vw;
+          max-width: 340px;
+          text-align: center;
+          padding: 14px 0;
+          font-size: 1.1em;
+          margin: 0 auto;
+          border-radius: 10px;
+          background: rgba(24,77,71, 0.85);
+          border: 2px solid #28A745;
+          color: #fff;
+        }
+        .main-nav .back-menu-link {
+          display: flex;
+        }
+        .back-btn-desktop {
+          display: none;
+        }
+      }
+    </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Tillbaka till startsidan</a>
+        <a href="index.html" class="back-btn back-btn-desktop"><i class="fas fa-arrow-left"></i> Tillbaka till startsidan</a>
         <h1>BK Hufvudstad</h1>
         <nav class="main-nav">
-    <ul>
-        <li><a href="bkhufvudstad.html">BK Hufvudstad</a></li>
-        <li><a href="design.html">Grafisk design</a></li>
-        <li><a href="text.html">Textproduktioner</a></li>
-        <li><a href="webbprototyper.html">Webbprototyper</a></li>
-    </ul>
-</nav>
+            <button class="hamburger" aria-label="Öppna meny"><i class="fas fa-bars"></i></button>
+            <ul>
+                <li class="back-menu-link"><a href="index.html"><i class="fas fa-arrow-left"></i> Tillbaka till startsidan</a></li>
+                <li><a href="bkhufvudstad.html">BK Hufvudstad</a></li>
+                <li><a href="design.html">Grafisk design</a></li>
+                <li><a href="text.html">Textproduktioner</a></li>
+                <li><a href="webbprototyper.html">Webbprototyper</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section>
             <h2>Projektets delar</h2>
-                                               <div class="bkh-grid">
-                            <div class="bkh-card">
-                                <a href="bk_logotyp.pdf" target="_blank">
-                                    <img src="bkh_bakgrund.jpg" alt="BK Hufvudstads logotyp" class="bkh-thumb">
-                                </a>
-                                <h3>BK Hufvudstads logotyp</h3>
-                                <p> Inspirerad av Stockholms betongslejon, med färger som representerar det kungliga slottet med royal blått och guld.</p>
-                            </div>
-                            <div class="bkh-card">
-                                <a href="matchday.PNG" target="_blank">
-                                    <img src="matchday.PNG" alt="Laguppställning för BK Hufvudstad" class="bkh-thumb">
-                                </a>
-                                <h3>Laguppställningar</h3>
-                                <p>Presentation av Laguppställningar inför matcher.</p>
-                            </div>
-                            <div class="bkh-card">
-                                <a href="posterbkh.png" target="_blank">
-                                    <img src="posterbkh.png" alt="Pre-match poster för BK Hufvudstad" class="bkh-thumb">
-                                </a>
-                                <h3>Poster</h3>
-                                <p>Pre-match poster inför lagets matcher.</p>
-                            </div>
-                            <div class="bkh-card">
-                                <a href="delavBKH.png" target="_blank">
-                                    <img src="delavBKH.png" alt="Poster som besrkvier BK Hufvudstads sökande på spelare" class="bkh-thumb">
-                                </a>
-                                <h3>Sökande av spelare</h3>
-                                <p>Poster som eftersöker nya spelare för laget. Anpassad för sociala medier.</p>
-                            </div>
-                        </div>
+            <div class="bkh-grid">
+                <div class="bkh-card">
+                    <a href="bk_logotyp.pdf" target="_blank">
+                        <img src="bkh_bakgrund.jpg" alt="BK Hufvudstads logotyp" class="bkh-thumb">
+                    </a>
+                    <h3>BK Hufvudstads logotyp</h3>
+                    <p>Inspirerad av Stockholms betongslejon, med färger som representerar det kungliga slottet med royal blått och guld.</p>
+                </div>
+                <div class="bkh-card">
+                    <a href="matchday.PNG" target="_blank">
+                        <img src="matchday.PNG" alt="Laguppställning för BK Hufvudstad" class="bkh-thumb">
+                    </a>
+                    <h3>Laguppställningar</h3>
+                    <p>Presentation av Laguppställningar inför matcher.</p>
+                </div>
+                <div class="bkh-card">
+                    <a href="posterbkh.png" target="_blank">
+                        <img src="posterbkh.png" alt="Pre-match poster för BK Hufvudstad" class="bkh-thumb">
+                    </a>
+                    <h3>Poster</h3>
+                    <p>Pre-match poster inför lagets matcher.</p>
+                </div>
+                <div class="bkh-card">
+                    <a href="delavBKH.png" target="_blank">
+                        <img src="delavBKH.png" alt="Poster som besrkvier BK Hufvudstads sökande på spelare" class="bkh-thumb">
+                    </a>
+                    <h3>Sökande av spelare</h3>
+                    <p>Poster som eftersöker nya spelare för laget. Anpassad för sociala medier.</p>
+                </div>
+            </div>
         </section>
-               <section class="center-section">
+        <section class="center-section">
             <h2>Om projektet</h2>
             <p>
                 BK Hufvudstad startades 2023 av mig och tre andra som ett fotbollslag i division 7.
@@ -64,5 +133,16 @@
             </p>
         </section>
     </main>
+    <script>
+      // Hamburger-meny funktion
+      document.querySelector('.hamburger').addEventListener('click', function() {
+        document.querySelector('.main-nav ul').classList.toggle('open');
+      });
+      // Stäng meny när man klickar på en länk (mobil)
+      document.querySelectorAll('.main-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          document.querySelector('.main-nav ul').classList.remove('open');
+        });
+      });
+    </script>
 </body>
-</html>
